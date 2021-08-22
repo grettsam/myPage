@@ -1,0 +1,140 @@
+@media (max-width:952px) {
+    .navbar ul li a {
+        font-size: 12px;
+    }
+    .header__titulos h1 {
+        font-size: 25px;
+    }
+    .header__titulos h3 {
+        font-size: 20px;
+    }
+    .about {
+        flex-direction: column
+    }
+    .about img {
+        width: 80%;
+    }
+    .portafolio,
+    .about {
+        width: 80vw;
+    }
+    .portafolio__item {
+        margin: 0 10px;
+    }
+    .portafolio__item h4 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .portafolio__item p {
+        display: none;
+    }
+}
+
+@media (max-width:620px) {
+    /* *Navbar */
+    .navbar {
+        margin-top: 3em;
+        position: absolute;
+        width: 100%;
+    }
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar ul li:last-child {
+        margin-right: 30px;
+    }
+    .menu {
+        display: none;
+    }
+    #toggle {
+        display: flex;
+        margin: auto;
+        border: none
+    }
+    #toggle i {
+        font-size: 20px;
+    }
+    .showMenu {
+        transition: 1s;
+        display: flex;
+        background-color: var(--light-color);
+    }
+    /* *Header */
+    header .header__hero {
+        height: 55vh;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: auto;
+    }
+    header .header__hero img {
+        width: 50vw;
+        order: 2;
+    }
+    .header__titulos {
+        text-align: center;
+        order: 1;
+    }
+    .header__titulos h1 {
+        font-size: 25px;
+    }
+    .header__titulos h3 {
+        font-size: 20px;
+    }
+    /* *About */
+    .about {
+        flex-direction: column
+    }
+    .about img {
+        max-width: 80vw;
+    }
+    .about__info h3,
+    .portafolio h3 {
+        font-size: 30px;
+    }
+    .about__info p {
+        text-align: justify
+    }
+    /* *Portafolio */
+    .portafolio__gallery {
+        flex-direction: column;
+    }
+    .portafolio__item {
+        min-width: 100%;
+        margin: 0;
+    }
+    .portafolio__item h4 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .portafolio__item p {
+        display: none;
+    }
+    .tecnologias ul i {
+        font-size: 15px;
+        margin: 3px;
+    }
+    .underAbout {
+        margin: 15px 0;
+    }
+    .underPortfolio {
+        margin: 15px 0 15px auto;
+    }
+}
+
+@media(max-width:425px) {
+    header .header__hero img {
+        width: 80vw;
+        order: 2;
+    }
+    .tecnologias ul i {
+        font-size: 25px;
+        margin: 0px;
+    }
+}
+
+@media(max-width:320px) {
+    .tecnologias {
+        display: none;
+    }
+}

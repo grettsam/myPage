@@ -9,8 +9,7 @@ const home = (req, res) => {
 };
 
 const error404 = (req = request, res = response) => {
-    let path404 = path.join(__dirname, "../public/404.html");
-    res.status(404).sendFile(path404);
+    res.render("404")
 };
 
 module.exports = {

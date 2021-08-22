@@ -1,25 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <!-- Styles Css -->
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Sebastian Infante</title>
-</head>
+{{>head}}
 
 <body>
     {{> header}}
-    <section class="about" id="about">
+    <section class="about animate__fadeIn" id="about">
         <div class="about__info">
             <h3>Un poco de mí</h3>
             <div class="underAbout"></div>
@@ -27,21 +13,62 @@
                 que tenía al entrar a estudiar diseño gráfico profesional y para lograrlo, entre al programa “1000 programadores para Chile” en el año 2018 donde aprendo las bases de la programación. Al año siguiente, entre a estudiar Analista Programador
                 y paralelamente comencé a trabajar con los chicos de Outalabs como diseñador y maquetador de sitios web. Actualmente ya titulado de analista programador he trabajado en varios sitios web y aplicaciones utilizando distintas tecnologías,
                 tanto de diseño como de programación.</p>
+
+            <p><b>Si quieres saber algo más de mi, puedes descarga mi <a class="cv" download href="/assets/CV-2021.pdf">Curriculum <i class="fas fa-download"></i></a></b></p>
+
         </div>
         <img src="/assets/DevGif.gif" alt="">
     </section>
-    <section class="portafolio" id="portafolio">
+    <section class="portafolio animate__fadeIn" id="portafolio">
         <h3>Portafolio</h3>
         <div class="underPortfolio"></div>
-        <div class="portafolio_gallery">
-            <img src="/assets/DevPng.png" width="300px" height="300px" alt="">
-            <img src="/assets/DevPng.png" width="300px" height="300px" alt="">
-            <img src="/assets/DevPng.png" width="300px" height="300px" alt="">
-            <img src="/assets/DevPng.png" width="300px" height="300px" alt="">
-
-
+        <div class="portafolio__gallery">
+            <div class="portafolio__item">
+                <img src="/assets/DevPng.png" alt="">
+                <h4>Titulo del trabajo</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, provident.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, provident.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, provident.</p>
+                <button class="btn__primary">Ver más</button>
+            </div>
+            <div class="portafolio__item">
+                <img src="/assets/DevPng.png" alt="">
+                <h4>Titulo del trabajo</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, provident.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, provident.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, provident.</p>
+                <button class="btn__primary">Ver más</button>
+            </div>
+            <div class="portafolio__item">
+                <img src="/assets/DevPng.png" alt="">
+                <h4>Titulo del trabajo</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, provident.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, provident.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, provident.</p>
+                <button class="btn__primary">Ver más</button>
+            </div>
         </div>
     </section>
+    <section>
+        <div class="tecnologias animate__fadeIn">
+            <ul>
+                <li><i class="fab fa-html5"></i></li>
+                <li><i class="fab fa-css3"></i></li>
+                <li><i class="fab fa-bootstrap"></i></li>
+                <li><i class="fab fa-sass"></i></li>
+                <li><i class="fab fa-js"></i></li>
+                <li><i class="fab fa-node-js"></i></li>
+                <li><i class="fab fa-angular"></i></li>
+                <li><i class="fas fa-database"></i></li>
+                <li><i class="fab fa-linux"></i></li>
+                <li><i class="fab fa-git-alt"></i></li>
+                <li><i class="fab fa-figma"></i></li>
+
+            </ul>
+        </div>
+    </section>
+    {{> footer}}
+    <script>
+        const toggle = document.getElementById('toggle')
+        const menu = document.getElementById('menu')
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle('showMenu');
+        })
+    </script>
 </body>
 
 </html>

@@ -4,10 +4,17 @@
   </button>
   <div class="menu" id="menu">
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/#about">Sobre mí</a></li>
-      <li><a href="/#portafolio">Mis trabajos</a></li>
-      <li><a href="/#footer">Contáctame</a></li>
+      {{#if dark}}
+        <li><a href="/" style="color: #1ECF8B">Home</a></li>
+        <li><a href="/#about" style="color: #1ECF8B">Sobre mí</a></li>
+        <li><a href="/#portafolio" style="color: #1ECF8B">Mis trabajos</a></li>
+        <li><a href="/#footer" style="color: #1ECF8B">Contáctame</a></li>
+      {{else}}
+        <li><a href="/">Home</a></li>
+        <li><a href="/#about">Sobre mí</a></li>
+        <li><a href="/#portafolio">Mis trabajos</a></li>
+        <li><a href="/#footer">Contáctame</a></li>
+      {{/if}}
     </ul>
   </div>
 </nav>

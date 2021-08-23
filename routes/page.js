@@ -1,10 +1,18 @@
 const { Router } = require("express");
 const router = Router();
-const path = require("path");
 
-const { error404, home } = require("../controllers/page");
+const {
+    error404,
+    home,
+    zyrapp,
+    emercorp,
+    sushitaro,
+} = require("../controllers/page");
 
 router.get("/", home);
+router.get("/zyrapp", zyrapp);
+router.get("/emercorp", emercorp);
+router.get("/sushitaro", sushitaro);
 
 router.get("*", error404);
 

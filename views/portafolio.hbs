@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head}}
+
+<body style="padding: 0;">
+    <header style="height: 80vh; background-color: {{bgcolor}}">
+    {{> navbar}}
+
+    <div class="header__hero header__portafolio">    
+        <img src="{{bgimg}}" alt="">    
+        <div class="header__titulos">
+            <h1>{{titulo}}</h1>
+            {{#if dark}}
+                <h3 style="color: #1ECF8B;">{{subtitulo}}</h3>
+            {{else}}
+                <h3>{{subtitulo}}</h3>
+            {{/if}}
+        </div>
+    </div>
+</header>
+<main class="main-portafolio">
+    <h3>Descripción del proyecto</h3>
+    <div class="underAbout"></div>
+    <p>{{descripcion}}</p>
+    <div class="imagenes">
+        <img src="{{primaryImg}}" alt="">
+        <img src="{{secondaryImg}}" alt="">
+    </div>
+    <p class="repo">Respositorio: <a href="{{repositorio}}"><i class="fab fa-github"></i></a></p>
+</main>
+</body>
+</html>

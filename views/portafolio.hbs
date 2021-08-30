@@ -4,30 +4,47 @@
 {{>head}}
 
 <body style="padding: 0;">
-    <header style="height: 80vh; background-color: {{bgcolor}}">
-    {{> navbar}}
+    <header class="container-fluid">
+        {{> navbar}}
 
-    <div class="header__hero header__portafolio">    
-        <img src="{{bgimg}}" alt="">    
-        <div class="header__titulos">
-            <h1>{{titulo}}</h1>
-            {{#if dark}}
+        <div class="header__hero align-items-center">
+            <img src="{{bgimg}}" alt="" class="h-50">
+            <div class="header__titulos">
+                <h1>{{titulo}}</h1>
+                {{#if dark}}
                 <h3 style="color: #1ECF8B;">{{subtitulo}}</h3>
-            {{else}}
+                {{else}}
                 <h3>{{subtitulo}}</h3>
-            {{/if}}
+                {{/if}}
+            </div>
         </div>
-    </div>
-</header>
-<main class="main-portafolio">
-    <h3>Descripción del proyecto</h3>
-    <div class="underAbout"></div>
-    <p>{{descripcion}}</p>
-    <div class="imagenes">
-        <img src="{{primaryImg}}" alt="">
-        <img src="{{secondaryImg}}" alt="">
-    </div>
-    <p class="repo">Respositorio: <a href="{{repositorio}}"><i class="fab fa-github"></i></a></p>
-</main>
+    </header>
+
+
+
+    <main class="main-portafolio container mx-auto my-5">
+        <h3>Descripción del proyecto</h3>
+
+        <p>{{descripcion}}</p>
+
+        <img class="img__m" src="{{primaryImg}}" alt="">
+        <img class="img__m" src="{{secondaryImg}}" alt="">
+        <div class="row">
+
+
+
+            {{#each imagenes}}
+            <div class="card col-md-3">
+                <img src="{{this}}" class="portafolio-galeria" alt="...">
+            </div>
+            {{/each}}
+        </div>
+        <p class="text-center">Respositorio: <a href="{{repositorio}}"><i class="fab fa-github"></i></a></p>
+    </main>
+    {{> footer}}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
+
 </html>

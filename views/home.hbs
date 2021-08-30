@@ -5,7 +5,7 @@
 
 <body>
     {{> header}}
-    <section class="about animate__fadeIn" id="about">
+    <section class="about animate__fadeIn d-md-flex  container justify-content-center align-items-center mx-auto my-3" id="about">
         <div class="about__info">
             <h3>Un poco de mí</h3>
             <div class="underAbout"></div>
@@ -19,56 +19,76 @@
         </div>
         <img src="/assets/DevGif.gif" alt="">
     </section>
-    <section class="portafolio animate__fadeIn" id="portafolio">
+
+
+    <section class="container mx-auto px-3 portafolio" id="portafolio">
         <h3>Portafolio</h3>
-        <div class="underPortfolio"></div>
-        <div class="portafolio__gallery">
-            <div class="portafolio__item">
-                <img src="assets\proyects\zyrapp\zyrapp.jpg" alt="">
-                <h4>Proyecto Zyrapp</h4>
-                <p>Zyrapp es una aplicación multiplataforma para que los centros de cultivos y empresas tengan un espacio dentro de la web para publicar sus productos ayudando con las ventas de estos. Adicional a ello, el usuario de la aplicación móvil aprenderá tips de cultivos y nuevos tipos de plantas.</p>
-                <a href="/zyrapp"><button class="btn__primary" >Ver más</button></a>
+        <div class="row">
+            <div class="col-md-4 my-3">
+                <div class="card">
+                    <img src="assets\proyects\zyrapp\m1.png " class="card-img-top " alt=" proyecto zyrapp ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Proyecto Zyrapp</h5>
+                        <p class="card-text ">Zyrapp es una aplicación multiplataforma para que los centros de cultivos y empresas tengan un espacio dentro de la web para publicar sus productos ayudando con las ventas de estos. Adicional a ello, el usuario de la aplicación
+                            móvil aprenderá tips de cultivos y nuevos tipos de plantas.</p>
+                        <a href="/zyrapp " class="btn btn-primary ">Ver más</a>
+                    </div>
+                </div>
             </div>
-            <div class="portafolio__item">
-                <img src="assets\proyects\emercorp\emercorp.jpg" alt="">
-                <h4>Emercorp</h4>
-                <p>Emercorp es una pequeña empresa que se dedica a la venta de ropa de rescate.</p>
-               <a href="/emercorp"> <button class="btn__primary">Ver más</button></a>
+            <div class="col-md-4 my-3">
+                <div class="card">
+                    <img src="assets\proyects\descubre\m1.jpg" class="card-img-top " alt=" proyecto zyrapp ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Descubre San Pedro de Atacama</h5>
+                        <p class="card-text"></p>
+                        <a href="/descubrespa " class="btn btn-primary ">Ver más</a>
+                    </div>
+                </div>
             </div>
-            <div class="portafolio__item">
-                <img src="assets\proyects\sushitaro\sushitaro.png" alt="">
-                <h4>Sushitaro</h4>
-                <p>Identidad visual y sitio web de pequeña empresa regional dedicada a la ventas de comida asiatica</p>
-                <a href="/sushitaro"><button class="btn__primary">Ver más</button></a>
+            <div class="col-md-4 my-3">
+                <div class="card">
+                    <img src="assets\proyects\pucvDAD\m1.png " class="card-img-top " alt=" proyecto zyrapp ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">PUCV - DAD</h5>
+                        <p class="card-text "></p>
+                        <a href="/pucvdad" class="btn btn-primary ">Ver más</a>
+                    </div>
+                </div>
             </div>
+            <a href="/portafolio" class="text-end fw-bold masTrabajos">Ver todos los trabajos <i class="fas fa-arrow-right"></i></a>
         </div>
+
     </section>
+
+
     <section>
-        <div class="tecnologias animate__fadeIn">
-            <ul>
-                <li><i class="fab fa-html5"></i></li>
-                <li><i class="fab fa-css3"></i></li>
-                <li><i class="fab fa-bootstrap"></i></li>
-                <li><i class="fab fa-sass"></i></li>
-                <li><i class="fab fa-js"></i></li>
-                <li><i class="fab fa-node-js"></i></li>
-                <li><i class="fab fa-angular"></i></li>
-                <li><i class="fas fa-database"></i></li>
-                <li><i class="fab fa-linux"></i></li>
-                <li><i class="fab fa-git-alt"></i></li>
-                <li><i class="fab fa-figma"></i></li>
+        <div class="tecnologias my-5 py-5">
+            <ul class="d-flex container mx-auto justify-content-between px-4">
+                <li><i class="fab fa-html5 "></i></li>
+                <li><i class="fab fa-css3 "></i></li>
+                <li><i class="fab fa-bootstrap "></i></li>
+                <li><i class="fab fa-sass "></i></li>
+                <li><i class="fab fa-js "></i></li>
+                <li><i class="fab fa-node-js "></i></li>
+                <li><i class="fab fa-angular "></i></li>
+                <li><i class="fas fa-database "></i></li>
+                <li><i class="fab fa-linux "></i></li>
+                <li><i class="fab fa-git-alt "></i></li>
+                <li><i class="fab fa-figma "></i></li>
 
             </ul>
         </div>
     </section>
+
     {{> footer}}
     <script>
         const toggle = document.getElementById('toggle')
         const menu = document.getElementById('menu')
-        toggle.addEventListener("click", () => {
+        toggle.addEventListener("click ", () => {
             menu.classList.toggle('showMenu');
         })
     </script>
+    <script src="js/bootstrap.bundle.min.js "></script>
 </body>
 
 </html>

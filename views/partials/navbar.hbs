@@ -1,20 +1,19 @@
-<nav class="navbar">
-  <button id="toggle">
-    <i class="fas fa-bars"></i>
-  </button>
-  <div class="menu" id="menu">
-    <ul>
-      {{#if dark}}
-        <li><a href="/" style="color: #1ECF8B">Home</a></li>
-        <li><a href="/#about" style="color: #1ECF8B">Sobre mí</a></li>
-        <li><a href="/#portafolio" style="color: #1ECF8B">Mis trabajos</a></li>
-        <li><a href="/#footer" style="color: #1ECF8B">Contáctame</a></li>
-      {{else}}
-        <li><a href="/">Home</a></li>
-        <li><a href="/#about">Sobre mí</a></li>
-        <li><a href="/#portafolio">Mis trabajos</a></li>
-        <li><a href="/#footer">Contáctame</a></li>
-      {{/if}}
-    </ul>
-  </div>
+{{#if dark}}
+<nav class="mode-dark navbar navbar-expand-lg bg-color-dark">
+{{else}}
+<nav class="navbar navbar-expand-lg">
+{{/if}}
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarToggle">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link" href="/#about" >Sobre mí</a>
+          <a class="nav-link" href="/#portafolio" >Mis trabajos</a>
+          <a class="nav-link" href="/#footer">Contáctame</a>
+        </div>
+      </div>
+    </div>
 </nav>

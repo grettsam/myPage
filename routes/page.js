@@ -11,8 +11,8 @@ const {
 
 router.get("/", home);
 router.get("/zyrapp", zyrapp);
-router.get("/emercorp", emercorp);
-router.get("/sushitaro", sushitaro);
+router.get("/descubrespa", emercorp);
+router.get("/pucvdad", sushitaro);
 
 router.get("*", error404);
 

@@ -7,7 +7,7 @@
     <header class="container-fluid">
         {{> navbar}}
 
-        <div class="header__hero align-items-center">
+        <div class="header__hero align-items-center header__hero__portafolio">
             <img src="{{bgimg}}" alt="" class="h-50">
             <div class="header__titulos">
                 <h1>{{titulo}}</h1>
@@ -29,16 +29,7 @@
 
         <img class="img__m" src="{{primaryImg}}" alt="">
         <img class="img__m" src="{{secondaryImg}}" alt="">
-        <div class="row">
 
-
-
-            {{#each imagenes}}
-            <div class="card col-md-3">
-                <img src="{{this}}" class="portafolio-galeria" alt="...">
-            </div>
-            {{/each}}
-        </div>
         <p class="text-center">Respositorio: <a href="{{repositorio}}"><i class="fab fa-github"></i></a></p>
     </main>
     {{> footer}}

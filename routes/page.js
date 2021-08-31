@@ -5,14 +5,16 @@ const {
     error404,
     home,
     zyrapp,
-    emercorp,
-    sushitaro,
+    descubre,
+    pucvdad,
+    proximamente,
 } = require("../controllers/page");
 
 router.get("/", home);
 router.get("/zyrapp", zyrapp);
-router.get("/descubrespa", emercorp);
-router.get("/pucvdad", sushitaro);
+router.get("/descubrespa", descubre);
+router.get("/pucvdad", pucvdad);
+router.get("/proximamente", proximamente);
 
 router.get("*", error404);
 
